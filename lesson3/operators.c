@@ -3,14 +3,18 @@
 
 int main() {
   int x, y;
+  char term;
   printf("This is basic demonstration of binary operations in language C. You will be asked to provide two numbers x and y.\n");
   printf("Please enter an integer x: ");
-  if (scanf("%d", &x) == 0) {  
-    printf("Input is not a number.\n");
+  if (scanf("%d%c", &x, &term) != 2 || term != '\n') {  
+    printf("Input is not an integer.\n"); 
     return 1;  // Exit with an error status
   }
   printf("Please enter an integer y: ");
-  scanf("%d", &y);
+  if (scanf("%d%c", &y, &term) != 2 || term != '\n') {  
+    printf("Input is not an integer.\n"); 
+    return 1;  // Exit with an error status
+  }
   printf("x+y = %d\n", x+y);
   printf("x-y = %d\n", x-y);
   printf("x*y = %d\n",x*y);
@@ -24,6 +28,11 @@ int main() {
   x ^= y; // x = x^y
   x >>= y; // x = x>>y
   x <<= y; // x = x<<y*/
+
+  /* TODO
+  numbers out of bound of int
+  solution for floats
+  */
 
   return 0;
 }
