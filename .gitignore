@@ -3,3 +3,5 @@
 *
 !/**/
 !*.*
+
+# git add -f -- myFile  will add myFile (and tracks) even though myFile ie extensionless
