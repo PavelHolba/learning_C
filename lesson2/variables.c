@@ -67,4 +67,10 @@ int main() {
     float correctDivision = (float) x/y; // this is explicit conversion, we say that x/y itself should be float instead int (which is inherited from types of x and y)
     printf("Divison of %d and %d is %.1f\n", x, y, correctDivision);
     printf("This is finally correct!\n");
+
+    // Constants, this is "variable", which is unchangeable and read-only
+    const int MINUTESPERHOUR  = 60; // must be assigned with a value, assigning later will not work
+    // MINUTESPERHOUR = 10; // this will print error
+
+    return 0;
 }
